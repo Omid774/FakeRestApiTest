@@ -49,6 +49,7 @@
 		F763F6BD2B7CB29900C8092E /* FakeRestApiTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FakeRestApiTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F763F6C12B7CB29900C8092E /* FakeRestApiTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeRestApiTestUITests.swift; sourceTree = "<group>"; };
 		F763F6C32B7CB29900C8092E /* FakeRestApiTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeRestApiTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F763F6D12B7CB56E00C8092E /* Practice.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Practice.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		F763F69F2B7CB29800C8092E /* FakeRestApiTest */ = {
 			isa = PBXGroup;
 			children = (
+				F763F6D02B7CB54400C8092E /* Playground */,
 				F763F6A02B7CB29800C8092E /* AppDelegate.swift */,
 				F763F6A22B7CB29800C8092E /* SceneDelegate.swift */,
 				F763F6A42B7CB29800C8092E /* ViewController.swift */,
@@ -125,6 +127,14 @@
 				F763F6C32B7CB29900C8092E /* FakeRestApiTestUITestsLaunchTests.swift */,
 			);
 			path = FakeRestApiTestUITests;
+			sourceTree = "<group>";
+		};
+		F763F6D02B7CB54400C8092E /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				F763F6D12B7CB56E00C8092E /* Practice.playground */,
+			);
+			path = Playground;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
