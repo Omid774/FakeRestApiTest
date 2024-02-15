@@ -11,7 +11,7 @@ import Foundation
 
 struct UserManager {
     
-    func fetch() {
+    func fetch(completion: @escaping ([UserModel]) -> Void ) {
         
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
         
@@ -25,7 +25,7 @@ struct UserManager {
             
             do {
                 let decodedData = try decoder.decode([UserModel].self, from: data)
-                print(decodedData)
+                completion(decodedData)
             } catch {
                 print("Error for decoding data: \(error.localizedDescription)")
             }
