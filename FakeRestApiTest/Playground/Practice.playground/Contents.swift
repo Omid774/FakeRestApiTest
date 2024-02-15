@@ -6,6 +6,8 @@ var greeting = "Hello, playground"
 
 // https://jsonplaceholder.typicode.com/posts
 
+// https://api.github.com/repos/:owner/:repo
+
 // MARK: - Fetch
 
 func fetch() {
@@ -20,10 +22,18 @@ func fetch() {
         
         print(data)
         
-        let dataSize = data.count
-        let dataSizeInt = Double(dataSize)
+        let decoder = JSONDecoder()
         
-        byteToMb(dataSizeInt)
+        do {
+            let decodedData = try decoder.decode([UserModel].self, from: data)
+            print(decodedData)
+            print("Success")
+        } catch {
+            print("Error decoding data: \(error.localizedDescription)")
+            print("Failure")
+        }
+        
+        print("End")
         
     }
    
@@ -32,21 +42,23 @@ func fetch() {
 
 fetch()
 
-// MARK: - Convert Byte to Megabyte
+// MARK: - Model
 
-func byteToMb(_ byte: Double) {
-
-    let convert = byte / 1_000_000
-
-    print("\(convert) MB")
-
+struct UserModel: Decodable {
+    
+    let userId: Int
+    let id: Int
+    let title: String
+    let body: String
+    
 }
 
-//byteToMb(27520)
+// MARK: - Comments
 
 /*
- 2️⃣ 📤
- 1. create function to calculate Byte to Megabyte
- 2. convert data to dataSize as Double
- 3. call Byte to Megabyte method and auto show both byte and MB size
+ 3️⃣ 📤
+ 1. create model json
+ 2. define a json decoder
+ 3. decoded data with consider error
+ 4. use do-catch block for error handling
  */
