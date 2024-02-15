@@ -16,6 +16,8 @@
 		F763F6B82B7CB29900C8092E /* FakeRestApiTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763F6B72B7CB29900C8092E /* FakeRestApiTestTests.swift */; };
 		F763F6C22B7CB29900C8092E /* FakeRestApiTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763F6C12B7CB29900C8092E /* FakeRestApiTestUITests.swift */; };
 		F763F6C42B7CB29900C8092E /* FakeRestApiTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F763F6C32B7CB29900C8092E /* FakeRestApiTestUITestsLaunchTests.swift */; };
+		F7F3D53E2B7E13BC006D5FB1 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F3D53D2B7E13BC006D5FB1 /* UserModel.swift */; };
+		F7F3D5402B7E1437006D5FB1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F3D53F2B7E1437006D5FB1 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		F763F6C12B7CB29900C8092E /* FakeRestApiTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeRestApiTestUITests.swift; sourceTree = "<group>"; };
 		F763F6C32B7CB29900C8092E /* FakeRestApiTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeRestApiTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F763F6D12B7CB56E00C8092E /* Practice.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Practice.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F7F3D53D2B7E13BC006D5FB1 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		F7F3D53F2B7E1437006D5FB1 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +105,11 @@
 			isa = PBXGroup;
 			children = (
 				F763F6D02B7CB54400C8092E /* Playground */,
+				F7F3D53C2B7E11E7006D5FB1 /* Model */,
+				F7F3D53B2B7E11DF006D5FB1 /* View */,
+				F7F3D53A2B7E11CA006D5FB1 /* Controller */,
 				F763F6A02B7CB29800C8092E /* AppDelegate.swift */,
 				F763F6A22B7CB29800C8092E /* SceneDelegate.swift */,
-				F763F6A42B7CB29800C8092E /* ViewController.swift */,
-				F763F6A62B7CB29800C8092E /* Main.storyboard */,
 				F763F6A92B7CB29900C8092E /* Assets.xcassets */,
 				F763F6AB2B7CB29900C8092E /* LaunchScreen.storyboard */,
 				F763F6AE2B7CB29900C8092E /* Info.plist */,
@@ -135,6 +140,31 @@
 				F763F6D12B7CB56E00C8092E /* Practice.playground */,
 			);
 			path = Playground;
+			sourceTree = "<group>";
+		};
+		F7F3D53A2B7E11CA006D5FB1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F763F6A42B7CB29800C8092E /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F7F3D53B2B7E11DF006D5FB1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F763F6A62B7CB29800C8092E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7F3D53C2B7E11E7006D5FB1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7F3D53D2B7E13BC006D5FB1 /* UserModel.swift */,
+				F7F3D53F2B7E1437006D5FB1 /* UserManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +300,8 @@
 			files = (
 				F763F6A52B7CB29800C8092E /* ViewController.swift in Sources */,
 				F763F6A12B7CB29800C8092E /* AppDelegate.swift in Sources */,
+				F7F3D53E2B7E13BC006D5FB1 /* UserModel.swift in Sources */,
+				F7F3D5402B7E1437006D5FB1 /* UserManager.swift in Sources */,
 				F763F6A32B7CB29800C8092E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
