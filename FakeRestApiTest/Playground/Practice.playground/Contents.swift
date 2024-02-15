@@ -14,8 +14,8 @@ var greeting = "Hello, playground"
          1. create MVC folder's and putting the relevant files inside each one.
          2. create model from json, inside Model folder.
          3. create UserManager for receive from internet.
-         4. test inside view did load and correct work.
-         5.
+         4. test inside view did load and correct work. ◀︎
+         5. create table view.
          6.
          7.
          8.
