@@ -31,6 +31,16 @@ class TableViewController: UITableViewController {
         
         let userManager = UserManager()
         
+        userManager.fetchImage { uiImage in
+            
+            DispatchQueue.main.async {
+                let omid = TableCell()
+                omid.myImage?.image = uiImage
+                self.tableView.reloadData()
+            }
+            
+        }
+        
         userManager.fetch { userModel in
             
             DispatchQueue.main.async { [self] in
