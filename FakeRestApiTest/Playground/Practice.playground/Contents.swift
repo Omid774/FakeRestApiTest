@@ -26,6 +26,11 @@ func fetch() -> Bool {
         
         guard let data = data else { return }
         
+        let dataSize = data.count
+        let doubleDataSize = Double(dataSize)
+        print("\(doubleDataSize) Byte")
+        byteToMegabyte(doubleDataSize)
+        
         guard let imageData = UIImage(data: data) else { return }
         
         print(imageData)
@@ -37,3 +42,8 @@ func fetch() -> Bool {
 }
 
 fetch()
+
+func byteToMegabyte(_ x: Double) {
+    let result = x / 1_000_000
+    print("\(result) MB")
+}
