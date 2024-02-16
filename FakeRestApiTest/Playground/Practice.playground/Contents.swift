@@ -11,9 +11,30 @@ var greeting = "Hello, playground"
 // MARK: - Comments
 
 /*
- 5️⃣ 📤
- 1. create callback for share decoded data.
- 2. inside view did load call callback and save into new property with property observer.
- 3. complete table view data source.
- 4. END
+    playground: check data is contain image or not.
  */
+
+func fetch() {
+    
+    guard let url = URL(string: "https://reactnative.dev/movies.json") else { return }
+    
+    let dataTask = URLSession.shared.dataTask(with: url) { data, _, error in
+        
+        if let error = error { print("there is an fetching error: \(error.localizedDescription)"); return }
+        
+        guard let data = data else { return }
+        
+        print(data)
+        
+        if let image = UIImage(data: data) { print("this data contain image.") } else {
+            print("NOT IMAGE DATA")
+        }
+        
+        print("END")
+        
+    }
+    
+    dataTask.resume()
+}
+
+fetch()
