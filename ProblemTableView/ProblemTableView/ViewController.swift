@@ -7,28 +7,6 @@
 
 import UIKit
 
-class ImageTableViewCell: UITableViewCell {
-    @IBOutlet weak var photoImageView: UIImageView!
-    
-    func configure(with imageURL: URL) {
-        
-        // Load image asynchronously
-        URLSession.shared.dataTask(with: imageURL) { (data, _, error) in
-            if let error = error {
-                print("Error loading image: \(error)")
-                return
-            }
-            
-            // Check if data is available and create UIImage
-            if let data = data, let image = UIImage(data: data) {
-                // Ensure UI updates on the main thread
-                DispatchQueue.main.async {
-                    self.photoImageView.image = image
-                }
-            }
-        }.resume()
-    }
-}
 
 class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -52,5 +30,29 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+}
+
+
+class ImageTableViewCell: UITableViewCell {
+    @IBOutlet weak var photoImageView: UIImageView!
+    
+    func configure(with imageURL: URL) {
+        
+        // Load image asynchronously
+        URLSession.shared.dataTask(with: imageURL) { (data, _, error) in
+            if let error = error {
+                print("Error loading image: \(error)")
+                return
+            }
+            
+            // Check if data is available and create UIImage
+            if let data = data, let image = UIImage(data: data) {
+                // Ensure UI updates on the main thread
+                DispatchQueue.main.async {
+                    self.photoImageView.image = image
+                }
+            }
+        }.resume()
     }
 }
